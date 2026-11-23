@@ -1,0 +1,912 @@
+{
+  "experiment": "triage-baseline-3923228f",
+  "arm": "baseline",
+  "overall": [
+    {
+      "key": "alert_confirmed_correct",
+      "mean": 1.0,
+      "scored": 24,
+      "not_applicable": 0
+    },
+    {
+      "key": "citations_exist",
+      "mean": 1.0,
+      "scored": 24,
+      "not_applicable": 0
+    },
+    {
+      "key": "expected_precedent_cited",
+      "mean": null,
+      "scored": 0,
+      "not_applicable": 24
+    },
+    {
+      "key": "forbidden_precedent_not_cited",
+      "mean": null,
+      "scored": 0,
+      "not_applicable": 24
+    },
+    {
+      "key": "judge_confidence_calibrated",
+      "mean": 0.9166666666666666,
+      "scored": 24,
+      "not_applicable": 0
+    },
+    {
+      "key": "judge_evidence_grounded",
+      "mean": 1.0,
+      "scored": 24,
+      "not_applicable": 0
+    },
+    {
+      "key": "judge_next_steps_actionable",
+      "mean": 0.8333333333333334,
+      "scored": 24,
+      "not_applicable": 0
+    },
+    {
+      "key": "judge_trustworthy",
+      "mean": 1.0,
+      "scored": 24,
+      "not_applicable": 0
+    },
+    {
+      "key": "no_customer_emails",
+      "mean": 1.0,
+      "scored": 24,
+      "not_applicable": 0
+    },
+    {
+      "key": "report_produced",
+      "mean": 1.0,
+      "scored": 24,
+      "not_applicable": 0
+    },
+    {
+      "key": "root_cause_correct",
+      "mean": 0.9523809523809523,
+      "scored": 21,
+      "not_applicable": 3
+    },
+    {
+      "key": "ruled_out_expected",
+      "mean": 1.0,
+      "scored": 18,
+      "not_applicable": 6
+    },
+    {
+      "key": "searched_past_incidents",
+      "mean": null,
+      "scored": 0,
+      "not_applicable": 24
+    },
+    {
+      "key": "ticket_decision_correct",
+      "mean": 0.9583333333333334,
+      "scored": 24,
+      "not_applicable": 0
+    },
+    {
+      "key": "ticket_key_reported",
+      "mean": 1.0,
+      "scored": 24,
+      "not_applicable": 0
+    },
+    {
+      "key": "tool_call_count",
+      "mean": 5.916666666666667,
+      "scored": 24,
+      "not_applicable": 0
+    }
+  ],
+  "slices": [
+    {
+      "name": "case_type=correct",
+      "metrics": [
+        {
+          "key": "alert_confirmed_correct",
+          "mean": 1.0,
+          "scored": 9,
+          "not_applicable": 0
+        },
+        {
+          "key": "citations_exist",
+          "mean": 1.0,
+          "scored": 9,
+          "not_applicable": 0
+        },
+        {
+          "key": "expected_precedent_cited",
+          "mean": null,
+          "scored": 0,
+          "not_applicable": 9
+        },
+        {
+          "key": "forbidden_precedent_not_cited",
+          "mean": null,
+          "scored": 0,
+          "not_applicable": 9
+        },
+        {
+          "key": "judge_confidence_calibrated",
+          "mean": 1.0,
+          "scored": 9,
+          "not_applicable": 0
+        },
+        {
+          "key": "judge_evidence_grounded",
+          "mean": 1.0,
+          "scored": 9,
+          "not_applicable": 0
+        },
+        {
+          "key": "judge_next_steps_actionable",
+          "mean": 0.7777777777777778,
+          "scored": 9,
+          "not_applicable": 0
+        },
+        {
+          "key": "judge_trustworthy",
+          "mean": 1.0,
+          "scored": 9,
+          "not_applicable": 0
+        },
+        {
+          "key": "no_customer_emails",
+          "mean": 1.0,
+          "scored": 9,
+          "not_applicable": 0
+        },
+        {
+          "key": "report_produced",
+          "mean": 1.0,
+          "scored": 9,
+          "not_applicable": 0
+        },
+        {
+          "key": "root_cause_correct",
+          "mean": 1.0,
+          "scored": 9,
+          "not_applicable": 0
+        },
+        {
+          "key": "ruled_out_expected",
+          "mean": 1.0,
+          "scored": 9,
+          "not_applicable": 0
+        },
+        {
+          "key": "searched_past_incidents",
+          "mean": null,
+          "scored": 0,
+          "not_applicable": 9
+        },
+        {
+          "key": "ticket_decision_correct",
+          "mean": 1.0,
+          "scored": 9,
+          "not_applicable": 0
+        },
+        {
+          "key": "ticket_key_reported",
+          "mean": 1.0,
+          "scored": 9,
+          "not_applicable": 0
+        },
+        {
+          "key": "tool_call_count",
+          "mean": 5.777777777777778,
+          "scored": 9,
+          "not_applicable": 0
+        }
+      ]
+    },
+    {
+      "name": "case_type=false_alarm",
+      "metrics": [
+        {
+          "key": "alert_confirmed_correct",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "citations_exist",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "expected_precedent_cited",
+          "mean": null,
+          "scored": 0,
+          "not_applicable": 3
+        },
+        {
+          "key": "forbidden_precedent_not_cited",
+          "mean": null,
+          "scored": 0,
+          "not_applicable": 3
+        },
+        {
+          "key": "judge_confidence_calibrated",
+          "mean": 0.3333333333333333,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "judge_evidence_grounded",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "judge_next_steps_actionable",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "judge_trustworthy",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "no_customer_emails",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "report_produced",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "root_cause_correct",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "ruled_out_expected",
+          "mean": null,
+          "scored": 0,
+          "not_applicable": 3
+        },
+        {
+          "key": "searched_past_incidents",
+          "mean": null,
+          "scored": 0,
+          "not_applicable": 3
+        },
+        {
+          "key": "ticket_decision_correct",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "ticket_key_reported",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "tool_call_count",
+          "mean": 5.0,
+          "scored": 3,
+          "not_applicable": 0
+        }
+      ]
+    },
+    {
+      "name": "case_type=misleading_cause",
+      "metrics": [
+        {
+          "key": "alert_confirmed_correct",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "citations_exist",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "expected_precedent_cited",
+          "mean": null,
+          "scored": 0,
+          "not_applicable": 3
+        },
+        {
+          "key": "forbidden_precedent_not_cited",
+          "mean": null,
+          "scored": 0,
+          "not_applicable": 3
+        },
+        {
+          "key": "judge_confidence_calibrated",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "judge_evidence_grounded",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "judge_next_steps_actionable",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "judge_trustworthy",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "no_customer_emails",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "report_produced",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "root_cause_correct",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "ruled_out_expected",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "searched_past_incidents",
+          "mean": null,
+          "scored": 0,
+          "not_applicable": 3
+        },
+        {
+          "key": "ticket_decision_correct",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "ticket_key_reported",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "tool_call_count",
+          "mean": 6.0,
+          "scored": 3,
+          "not_applicable": 0
+        }
+      ]
+    },
+    {
+      "name": "case_type=vague",
+      "metrics": [
+        {
+          "key": "alert_confirmed_correct",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "citations_exist",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "expected_precedent_cited",
+          "mean": null,
+          "scored": 0,
+          "not_applicable": 3
+        },
+        {
+          "key": "forbidden_precedent_not_cited",
+          "mean": null,
+          "scored": 0,
+          "not_applicable": 3
+        },
+        {
+          "key": "judge_confidence_calibrated",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "judge_evidence_grounded",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "judge_next_steps_actionable",
+          "mean": 0.6666666666666666,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "judge_trustworthy",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "no_customer_emails",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "report_produced",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "root_cause_correct",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "ruled_out_expected",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "searched_past_incidents",
+          "mean": null,
+          "scored": 0,
+          "not_applicable": 3
+        },
+        {
+          "key": "ticket_decision_correct",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "ticket_key_reported",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "tool_call_count",
+          "mean": 6.333333333333333,
+          "scored": 3,
+          "not_applicable": 0
+        }
+      ]
+    },
+    {
+      "name": "case_type=wrong_service",
+      "metrics": [
+        {
+          "key": "alert_confirmed_correct",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "citations_exist",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "expected_precedent_cited",
+          "mean": null,
+          "scored": 0,
+          "not_applicable": 3
+        },
+        {
+          "key": "forbidden_precedent_not_cited",
+          "mean": null,
+          "scored": 0,
+          "not_applicable": 3
+        },
+        {
+          "key": "judge_confidence_calibrated",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "judge_evidence_grounded",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "judge_next_steps_actionable",
+          "mean": 0.6666666666666666,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "judge_trustworthy",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "no_customer_emails",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "report_produced",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "root_cause_correct",
+          "mean": null,
+          "scored": 0,
+          "not_applicable": 3
+        },
+        {
+          "key": "ruled_out_expected",
+          "mean": null,
+          "scored": 0,
+          "not_applicable": 3
+        },
+        {
+          "key": "searched_past_incidents",
+          "mean": null,
+          "scored": 0,
+          "not_applicable": 3
+        },
+        {
+          "key": "ticket_decision_correct",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "ticket_key_reported",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "tool_call_count",
+          "mean": 6.666666666666667,
+          "scored": 3,
+          "not_applicable": 0
+        }
+      ]
+    },
+    {
+      "name": "case_type=wrong_start_time",
+      "metrics": [
+        {
+          "key": "alert_confirmed_correct",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "citations_exist",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "expected_precedent_cited",
+          "mean": null,
+          "scored": 0,
+          "not_applicable": 3
+        },
+        {
+          "key": "forbidden_precedent_not_cited",
+          "mean": null,
+          "scored": 0,
+          "not_applicable": 3
+        },
+        {
+          "key": "judge_confidence_calibrated",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "judge_evidence_grounded",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "judge_next_steps_actionable",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "judge_trustworthy",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "no_customer_emails",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "report_produced",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "root_cause_correct",
+          "mean": 0.6666666666666666,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "ruled_out_expected",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "searched_past_incidents",
+          "mean": null,
+          "scored": 0,
+          "not_applicable": 3
+        },
+        {
+          "key": "ticket_decision_correct",
+          "mean": 0.6666666666666666,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "ticket_key_reported",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "tool_call_count",
+          "mean": 6.0,
+          "scored": 3,
+          "not_applicable": 0
+        }
+      ]
+    },
+    {
+      "name": "source=human",
+      "metrics": [
+        {
+          "key": "alert_confirmed_correct",
+          "mean": 1.0,
+          "scored": 18,
+          "not_applicable": 0
+        },
+        {
+          "key": "citations_exist",
+          "mean": 1.0,
+          "scored": 18,
+          "not_applicable": 0
+        },
+        {
+          "key": "expected_precedent_cited",
+          "mean": null,
+          "scored": 0,
+          "not_applicable": 18
+        },
+        {
+          "key": "forbidden_precedent_not_cited",
+          "mean": null,
+          "scored": 0,
+          "not_applicable": 18
+        },
+        {
+          "key": "judge_confidence_calibrated",
+          "mean": 0.8888888888888888,
+          "scored": 18,
+          "not_applicable": 0
+        },
+        {
+          "key": "judge_evidence_grounded",
+          "mean": 1.0,
+          "scored": 18,
+          "not_applicable": 0
+        },
+        {
+          "key": "judge_next_steps_actionable",
+          "mean": 0.8333333333333334,
+          "scored": 18,
+          "not_applicable": 0
+        },
+        {
+          "key": "judge_trustworthy",
+          "mean": 1.0,
+          "scored": 18,
+          "not_applicable": 0
+        },
+        {
+          "key": "no_customer_emails",
+          "mean": 1.0,
+          "scored": 18,
+          "not_applicable": 0
+        },
+        {
+          "key": "report_produced",
+          "mean": 1.0,
+          "scored": 18,
+          "not_applicable": 0
+        },
+        {
+          "key": "root_cause_correct",
+          "mean": 0.9333333333333333,
+          "scored": 15,
+          "not_applicable": 3
+        },
+        {
+          "key": "ruled_out_expected",
+          "mean": 1.0,
+          "scored": 12,
+          "not_applicable": 6
+        },
+        {
+          "key": "searched_past_incidents",
+          "mean": null,
+          "scored": 0,
+          "not_applicable": 18
+        },
+        {
+          "key": "ticket_decision_correct",
+          "mean": 0.9444444444444444,
+          "scored": 18,
+          "not_applicable": 0
+        },
+        {
+          "key": "ticket_key_reported",
+          "mean": 1.0,
+          "scored": 18,
+          "not_applicable": 0
+        },
+        {
+          "key": "tool_call_count",
+          "mean": 6.0,
+          "scored": 18,
+          "not_applicable": 0
+        }
+      ]
+    },
+    {
+      "name": "source=monitor",
+      "metrics": [
+        {
+          "key": "alert_confirmed_correct",
+          "mean": 1.0,
+          "scored": 6,
+          "not_applicable": 0
+        },
+        {
+          "key": "citations_exist",
+          "mean": 1.0,
+          "scored": 6,
+          "not_applicable": 0
+        },
+        {
+          "key": "expected_precedent_cited",
+          "mean": null,
+          "scored": 0,
+          "not_applicable": 6
+        },
+        {
+          "key": "forbidden_precedent_not_cited",
+          "mean": null,
+          "scored": 0,
+          "not_applicable": 6
+        },
+        {
+          "key": "judge_confidence_calibrated",
+          "mean": 1.0,
+          "scored": 6,
+          "not_applicable": 0
+        },
+        {
+          "key": "judge_evidence_grounded",
+          "mean": 1.0,
+          "scored": 6,
+          "not_applicable": 0
+        },
+        {
+          "key": "judge_next_steps_actionable",
+          "mean": 0.8333333333333334,
+          "scored": 6,
+          "not_applicable": 0
+        },
+        {
+          "key": "judge_trustworthy",
+          "mean": 1.0,
+          "scored": 6,
+          "not_applicable": 0
+        },
+        {
+          "key": "no_customer_emails",
+          "mean": 1.0,
+          "scored": 6,
+          "not_applicable": 0
+        },
+        {
+          "key": "report_produced",
+          "mean": 1.0,
+          "scored": 6,
+          "not_applicable": 0
+        },
+        {
+          "key": "root_cause_correct",
+          "mean": 1.0,
+          "scored": 6,
+          "not_applicable": 0
+        },
+        {
+          "key": "ruled_out_expected",
+          "mean": 1.0,
+          "scored": 6,
+          "not_applicable": 0
+        },
+        {
+          "key": "searched_past_incidents",
+          "mean": null,
+          "scored": 0,
+          "not_applicable": 6
+        },
+        {
+          "key": "ticket_decision_correct",
+          "mean": 1.0,
+          "scored": 6,
+          "not_applicable": 0
+        },
+        {
+          "key": "ticket_key_reported",
+          "mean": 1.0,
+          "scored": 6,
+          "not_applicable": 0
+        },
+        {
+          "key": "tool_call_count",
+          "mean": 5.666666666666667,
+          "scored": 6,
+          "not_applicable": 0
+        }
+      ]
+    }
+  ]
+}

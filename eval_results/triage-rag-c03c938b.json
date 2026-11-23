@@ -1,0 +1,588 @@
+{
+  "experiment": "triage-rag-c03c938b",
+  "arm": "rag",
+  "overall": [
+    {
+      "key": "alert_confirmed_correct",
+      "mean": 0.9583333333333334,
+      "scored": 24,
+      "not_applicable": 0
+    },
+    {
+      "key": "citations_exist",
+      "mean": 1.0,
+      "scored": 24,
+      "not_applicable": 0
+    },
+    {
+      "key": "expected_precedent_cited",
+      "mean": 0.9047619047619048,
+      "scored": 21,
+      "not_applicable": 3
+    },
+    {
+      "key": "forbidden_precedent_not_cited",
+      "mean": 1.0,
+      "scored": 24,
+      "not_applicable": 0
+    },
+    {
+      "key": "no_customer_emails",
+      "mean": 1.0,
+      "scored": 24,
+      "not_applicable": 0
+    },
+    {
+      "key": "report_produced",
+      "mean": 1.0,
+      "scored": 24,
+      "not_applicable": 0
+    },
+    {
+      "key": "root_cause_correct",
+      "mean": 0.9047619047619048,
+      "scored": 21,
+      "not_applicable": 3
+    },
+    {
+      "key": "ruled_out_expected",
+      "mean": 0.4444444444444444,
+      "scored": 18,
+      "not_applicable": 6
+    },
+    {
+      "key": "searched_past_incidents",
+      "mean": 0.7916666666666666,
+      "scored": 24,
+      "not_applicable": 0
+    },
+    {
+      "key": "tool_call_count",
+      "mean": 5.833333333333333,
+      "scored": 24,
+      "not_applicable": 0
+    }
+  ],
+  "slices": [
+    {
+      "name": "case_type=correct",
+      "metrics": [
+        {
+          "key": "alert_confirmed_correct",
+          "mean": 1.0,
+          "scored": 9,
+          "not_applicable": 0
+        },
+        {
+          "key": "citations_exist",
+          "mean": 1.0,
+          "scored": 9,
+          "not_applicable": 0
+        },
+        {
+          "key": "expected_precedent_cited",
+          "mean": 1.0,
+          "scored": 9,
+          "not_applicable": 0
+        },
+        {
+          "key": "forbidden_precedent_not_cited",
+          "mean": 1.0,
+          "scored": 9,
+          "not_applicable": 0
+        },
+        {
+          "key": "no_customer_emails",
+          "mean": 1.0,
+          "scored": 9,
+          "not_applicable": 0
+        },
+        {
+          "key": "report_produced",
+          "mean": 1.0,
+          "scored": 9,
+          "not_applicable": 0
+        },
+        {
+          "key": "root_cause_correct",
+          "mean": 1.0,
+          "scored": 9,
+          "not_applicable": 0
+        },
+        {
+          "key": "ruled_out_expected",
+          "mean": 0.2222222222222222,
+          "scored": 9,
+          "not_applicable": 0
+        },
+        {
+          "key": "searched_past_incidents",
+          "mean": 1.0,
+          "scored": 9,
+          "not_applicable": 0
+        },
+        {
+          "key": "tool_call_count",
+          "mean": 6.666666666666667,
+          "scored": 9,
+          "not_applicable": 0
+        }
+      ]
+    },
+    {
+      "name": "case_type=false_alarm",
+      "metrics": [
+        {
+          "key": "alert_confirmed_correct",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "citations_exist",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "expected_precedent_cited",
+          "mean": null,
+          "scored": 0,
+          "not_applicable": 3
+        },
+        {
+          "key": "forbidden_precedent_not_cited",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "no_customer_emails",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "report_produced",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "root_cause_correct",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "ruled_out_expected",
+          "mean": null,
+          "scored": 0,
+          "not_applicable": 3
+        },
+        {
+          "key": "searched_past_incidents",
+          "mean": 0.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "tool_call_count",
+          "mean": 5.333333333333333,
+          "scored": 3,
+          "not_applicable": 0
+        }
+      ]
+    },
+    {
+      "name": "case_type=misleading_cause",
+      "metrics": [
+        {
+          "key": "alert_confirmed_correct",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "citations_exist",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "expected_precedent_cited",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "forbidden_precedent_not_cited",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "no_customer_emails",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "report_produced",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "root_cause_correct",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "ruled_out_expected",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "searched_past_incidents",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "tool_call_count",
+          "mean": 5.0,
+          "scored": 3,
+          "not_applicable": 0
+        }
+      ]
+    },
+    {
+      "name": "case_type=vague",
+      "metrics": [
+        {
+          "key": "alert_confirmed_correct",
+          "mean": 0.6666666666666666,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "citations_exist",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "expected_precedent_cited",
+          "mean": 0.6666666666666666,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "forbidden_precedent_not_cited",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "no_customer_emails",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "report_produced",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "root_cause_correct",
+          "mean": 0.6666666666666666,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "ruled_out_expected",
+          "mean": 0.6666666666666666,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "searched_past_incidents",
+          "mean": 0.6666666666666666,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "tool_call_count",
+          "mean": 6.333333333333333,
+          "scored": 3,
+          "not_applicable": 0
+        }
+      ]
+    },
+    {
+      "name": "case_type=wrong_service",
+      "metrics": [
+        {
+          "key": "alert_confirmed_correct",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "citations_exist",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "expected_precedent_cited",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "forbidden_precedent_not_cited",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "no_customer_emails",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "report_produced",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "root_cause_correct",
+          "mean": null,
+          "scored": 0,
+          "not_applicable": 3
+        },
+        {
+          "key": "ruled_out_expected",
+          "mean": null,
+          "scored": 0,
+          "not_applicable": 3
+        },
+        {
+          "key": "searched_past_incidents",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "tool_call_count",
+          "mean": 3.0,
+          "scored": 3,
+          "not_applicable": 0
+        }
+      ]
+    },
+    {
+      "name": "case_type=wrong_start_time",
+      "metrics": [
+        {
+          "key": "alert_confirmed_correct",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "citations_exist",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "expected_precedent_cited",
+          "mean": 0.6666666666666666,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "forbidden_precedent_not_cited",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "no_customer_emails",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "report_produced",
+          "mean": 1.0,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "root_cause_correct",
+          "mean": 0.6666666666666666,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "ruled_out_expected",
+          "mean": 0.3333333333333333,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "searched_past_incidents",
+          "mean": 0.6666666666666666,
+          "scored": 3,
+          "not_applicable": 0
+        },
+        {
+          "key": "tool_call_count",
+          "mean": 7.0,
+          "scored": 3,
+          "not_applicable": 0
+        }
+      ]
+    },
+    {
+      "name": "source=human",
+      "metrics": [
+        {
+          "key": "alert_confirmed_correct",
+          "mean": 0.9444444444444444,
+          "scored": 18,
+          "not_applicable": 0
+        },
+        {
+          "key": "citations_exist",
+          "mean": 1.0,
+          "scored": 18,
+          "not_applicable": 0
+        },
+        {
+          "key": "expected_precedent_cited",
+          "mean": 0.8666666666666667,
+          "scored": 15,
+          "not_applicable": 3
+        },
+        {
+          "key": "forbidden_precedent_not_cited",
+          "mean": 1.0,
+          "scored": 18,
+          "not_applicable": 0
+        },
+        {
+          "key": "no_customer_emails",
+          "mean": 1.0,
+          "scored": 18,
+          "not_applicable": 0
+        },
+        {
+          "key": "report_produced",
+          "mean": 1.0,
+          "scored": 18,
+          "not_applicable": 0
+        },
+        {
+          "key": "root_cause_correct",
+          "mean": 0.8666666666666667,
+          "scored": 15,
+          "not_applicable": 3
+        },
+        {
+          "key": "ruled_out_expected",
+          "mean": 0.5,
+          "scored": 12,
+          "not_applicable": 6
+        },
+        {
+          "key": "searched_past_incidents",
+          "mean": 0.7222222222222222,
+          "scored": 18,
+          "not_applicable": 0
+        },
+        {
+          "key": "tool_call_count",
+          "mean": 5.611111111111111,
+          "scored": 18,
+          "not_applicable": 0
+        }
+      ]
+    },
+    {
+      "name": "source=monitor",
+      "metrics": [
+        {
+          "key": "alert_confirmed_correct",
+          "mean": 1.0,
+          "scored": 6,
+          "not_applicable": 0
+        },
+        {
+          "key": "citations_exist",
+          "mean": 1.0,
+          "scored": 6,
+          "not_applicable": 0
+        },
+        {
+          "key": "expected_precedent_cited",
+          "mean": 1.0,
+          "scored": 6,
+          "not_applicable": 0
+        },
+        {
+          "key": "forbidden_precedent_not_cited",
+          "mean": 1.0,
+          "scored": 6,
+          "not_applicable": 0
+        },
+        {
+          "key": "no_customer_emails",
+          "mean": 1.0,
+          "scored": 6,
+          "not_applicable": 0
+        },
+        {
+          "key": "report_produced",
+          "mean": 1.0,
+          "scored": 6,
+          "not_applicable": 0
+        },
+        {
+          "key": "root_cause_correct",
+          "mean": 1.0,
+          "scored": 6,
+          "not_applicable": 0
+        },
+        {
+          "key": "ruled_out_expected",
+          "mean": 0.3333333333333333,
+          "scored": 6,
+          "not_applicable": 0
+        },
+        {
+          "key": "searched_past_incidents",
+          "mean": 1.0,
+          "scored": 6,
+          "not_applicable": 0
+        },
+        {
+          "key": "tool_call_count",
+          "mean": 6.5,
+          "scored": 6,
+          "not_applicable": 0
+        }
+      ]
+    }
+  ]
+}

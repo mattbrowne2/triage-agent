@@ -1,0 +1,107 @@
+{
+  "incidents": [
+    {
+      "key": "INC-311",
+      "title": "Checkout failing after payment-service deploy made a request field required",
+      "service": "checkout-service",
+      "symptoms": "checkout-service returned HTTP 500 on POST /api/checkout. Logs showed PaymentClientError: 400 Bad Request - missing required field 'amount_minor'. payment-service logged warnings rejecting charge requests. web-frontend showed checkout 500s. Started two minutes after a payment-service rolling update.",
+      "opened_at": "2026-09-02T14:20:00Z",
+      "resolution": {
+        "confirmed_root_cause": "payment-service v2.11.0 changed its charge request schema and made 'amount_minor' required. checkout-service still sent the old payload, so every charge was rejected with 400.",
+        "fix": "Rolled payment-service back to v2.10.4 to stop the failures, then released v2.11.1 with the field optional and added a consumer contract test between checkout and payment.",
+        "changes": [
+          {"kind": "rollback", "ref": "deploy #7731", "url": "https://ci.example.com/deploys/7731"},
+          {"kind": "pull_request", "ref": "payments#1432", "url": "https://git.example.com/payments/pull/1432"}
+        ],
+        "resolved_at": "2026-09-02T14:48:00Z",
+        "agent_was_right": null
+      }
+    },
+    {
+      "key": "INC-287",
+      "title": "inventory-service timeout warnings to inventory-db",
+      "service": "inventory-service",
+      "symptoms": "inventory-service logged warnings: Timeout calling inventory-db after 2000ms, retry succeeded. About one per minute, around the clock. No customer-facing errors.",
+      "opened_at": "2026-07-14T09:05:00Z",
+      "resolution": {
+        "confirmed_root_cause": "Known background noise: inventory-db's nightly vacuum and periodic connection recycling cause occasional slow first attempts. The client retries and every retry succeeds.",
+        "fix": "No action needed. Treat these warnings as pre-existing noise unless retries start failing or the rate rises well above one per minute.",
+        "changes": [],
+        "resolved_at": "2026-07-15T11:30:00Z",
+        "agent_was_right": null
+      }
+    },
+    {
+      "key": "INC-298",
+      "title": "Checkout payment failures from an expired TLS certificate",
+      "service": "checkout-service",
+      "symptoms": "checkout-service returned HTTP 500 on POST /api/checkout. Logs showed PaymentClientError: SSL handshake failed - certificate has expired when calling the payment gateway. web-frontend showed checkout 500s. No deploys in the preceding hours.",
+      "opened_at": "2026-10-03T00:02:00Z",
+      "resolution": {
+        "confirmed_root_cause": "The TLS certificate for the payment gateway's internal endpoint expired at midnight because automatic renewal had been disabled during a migration.",
+        "fix": "Renewed the certificate, re-enabled automatic renewal and added an expiry alert 14 days ahead.",
+        "changes": [
+          {"kind": "config_change", "ref": "infra#988", "url": "https://git.example.com/infra/pull/988"}
+        ],
+        "resolved_at": "2026-10-03T00:41:00Z",
+        "agent_was_right": null
+      }
+    },
+    {
+      "key": "INC-305",
+      "title": "Slow checkouts from database connection pool exhaustion",
+      "service": "checkout-service",
+      "symptoms": "checkout-service latency rose above 5 seconds and some requests failed with HTTP 503. Logs showed TimeoutError: could not acquire database connection from pool within 3000ms. Error rate climbed slowly over an hour during a traffic peak.",
+      "opened_at": "2026-10-21T18:10:00Z",
+      "resolution": {
+        "confirmed_root_cause": "A new order-history query held database connections for seconds at a time, exhausting checkout-service's pool of 20 connections during the evening peak.",
+        "fix": "Moved the order-history query to a read replica and raised the pool size to 40.",
+        "changes": [
+          {"kind": "pull_request", "ref": "checkout#2210", "url": "https://git.example.com/checkout/pull/2210"}
+        ],
+        "resolved_at": "2026-10-21T19:25:00Z",
+        "agent_was_right": null
+      }
+    },
+    {
+      "key": "INC-276",
+      "title": "web-frontend serving 404s for static assets after CDN change",
+      "service": "web-frontend",
+      "symptoms": "web-frontend pages loaded without styles. Logs showed GET /static/app.css 404 at a high rate. Backend services were healthy.",
+      "opened_at": "2026-06-30T10:15:00Z",
+      "resolution": {
+        "confirmed_root_cause": "A CDN configuration change pointed the static asset origin at an empty bucket.",
+        "fix": "Reverted the CDN origin configuration.",
+        "changes": [
+          {"kind": "config_change", "ref": "cdn-config#57", "url": "https://git.example.com/cdn-config/pull/57"}
+        ],
+        "resolved_at": "2026-06-30T10:40:00Z",
+        "agent_was_right": null
+      }
+    },
+    {
+      "key": "INC-302",
+      "title": "Order confirmation emails delayed by SMTP rate limiting",
+      "service": "notification-service",
+      "symptoms": "notification-service logged warnings: SMTP 421 too many connections, retrying in 60s. Order confirmation emails arrived up to 40 minutes late. Checkout itself was unaffected.",
+      "opened_at": "2026-10-11T08:00:00Z",
+      "resolution": {
+        "confirmed_root_cause": "A marketing campaign shared the same SMTP account and hit the provider's connection limit.",
+        "fix": "Moved marketing email to a separate SMTP account.",
+        "changes": [
+          {"kind": "config_change", "ref": "notifications#341", "url": "https://git.example.com/notifications/pull/341"}
+        ],
+        "resolved_at": "2026-10-11T12:15:00Z",
+        "agent_was_right": null
+      }
+    },
+    {
+      "key": "INC-316",
+      "title": "Intermittent 502s from the load balancer in front of web-frontend",
+      "service": "web-frontend",
+      "symptoms": "web-frontend returned occasional HTTP 502 Bad Gateway responses, a few per hour, with no matching application errors. Not yet explained.",
+      "opened_at": "2026-11-12T16:45:00Z",
+      "resolution": null
+    }
+  ]
+}

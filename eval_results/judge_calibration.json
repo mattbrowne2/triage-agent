@@ -1,0 +1,49 @@
+{
+  "judge_model": "claude-opus-5-5",
+  "labelled": 16,
+  "criteria": [
+    {
+      "criterion": "evidence_grounded",
+      "agreement": 1.0,
+      "both_pass": 16,
+      "both_fail": 0,
+      "judge_pass_human_fail": 0,
+      "judge_fail_human_pass": 0
+    },
+    {
+      "criterion": "confidence_calibrated",
+      "agreement": 1.0,
+      "both_pass": 16,
+      "both_fail": 0,
+      "judge_pass_human_fail": 0,
+      "judge_fail_human_pass": 0
+    },
+    {
+      "criterion": "next_steps_actionable",
+      "agreement": 0.9375,
+      "both_pass": 15,
+      "both_fail": 0,
+      "judge_pass_human_fail": 0,
+      "judge_fail_human_pass": 1
+    },
+    {
+      "criterion": "trustworthy",
+      "agreement": 1.0,
+      "both_pass": 16,
+      "both_fail": 0,
+      "judge_pass_human_fail": 0,
+      "judge_fail_human_pass": 0
+    }
+  ],
+  "disagreements": [
+    {
+      "case_id": "human-misleading-cause",
+      "run_id": "01a2049c-4f0e-7315-9469-31ac96213a43",
+      "criterion": "next_steps_actionable",
+      "judge": "fail",
+      "human": "pass",
+      "judge_reasoning": "The steps are specific: they name commit 7c411bf, v2.14.0 versus checkout v3.8.1, rollback to v2.13.2, which metrics to validate, and contract tests. They do not claim any action was taken. However, there is active customer impact (90 failed checkouts, recovery unverified), yet the first step is a code-diff investigation. Mitigation comes second and is only hedged as 'consider rolling back'. The rubric requires mitigation before follow-up investigation when customers are affected, so the ordering does not meet the bar.",
+      "human_notes": ""
+    }
+  ]
+}

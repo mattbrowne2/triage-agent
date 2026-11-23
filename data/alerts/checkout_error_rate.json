@@ -1,0 +1,10 @@
+{
+  "id": "error-rate:checkout-service:2026-11-17T02:05:00Z",
+  "monitor": "error-rate",
+  "service": "checkout-service",
+  "window_start": "2026-11-17T02:05:00Z",
+  "window_end": "2026-11-17T02:10:00Z",
+  "error_count": 15,
+  "log_count": 45,
+  "threshold": 0.05
+}
